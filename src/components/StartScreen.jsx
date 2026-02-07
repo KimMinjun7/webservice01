@@ -1,3 +1,5 @@
+import AdBanner from './AdBanner';
+
 function StartScreen({ onStart }) {
   return (
     <div className="start-screen">
@@ -19,6 +21,7 @@ function StartScreen({ onStart }) {
           테스트 시작하기
         </button>
         <p className="start-note">약 2~3분 소요</p>
+        <AdBanner />
       </div>
     </div>
   );

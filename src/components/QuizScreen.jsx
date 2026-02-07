@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import questions from '../data/questions';
+import AdBanner from './AdBanner';
 
 function QuizScreen({ onComplete }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -59,6 +60,7 @@ function QuizScreen({ onComplete }) {
           ))}
         </div>
       </div>
+      <AdBanner />
     </div>
   );
 }
