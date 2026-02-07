@@ -1,5 +1,6 @@
 import loveTypes from '../data/types';
 import RadarChart from './RadarChart';
+import AdBanner from './AdBanner';
 
 function ResultScreen({ typeCode, scores, onRestart }) {
   const myType = loveTypes[typeCode];
@@ -83,6 +84,8 @@ function ResultScreen({ typeCode, scores, onRestart }) {
         <h3 className="section-title">📊 나의 연애 성향 분석</h3>
         <RadarChart scores={scores} />
       </div>
+
+      <AdBanner />
 
       <div className="result-section">
         <h3 className="section-title">💚 잘 맞는 타입</h3>
