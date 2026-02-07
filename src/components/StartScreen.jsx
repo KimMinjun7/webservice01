@@ -1,6 +1,6 @@
 import AdBanner from './AdBanner';
 
-function StartScreen({ onStart }) {
+function StartScreen({ onStart, onIntro }) {
   return (
     <div className="start-screen">
       <div className="start-content">
@@ -10,6 +10,9 @@ function StartScreen({ onStart }) {
           10개의 질문으로 알아보는<br />
           나의 연애 유형 & 궁합 테스트
         </p>
+        <button className="intro-link" onClick={onIntro} type="button">
+          서비스 소개 보기
+        </button>
         <div className="start-tags">
           <span className="tag">연애 성향</span>
           <span className="tag">갈등 방식</span>

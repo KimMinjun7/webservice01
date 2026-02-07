@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import IntroScreen from './components/IntroScreen';
 import StartScreen from './components/StartScreen';
 import QuizScreen from './components/QuizScreen';
 import ResultScreen from './components/ResultScreen';
@@ -21,6 +22,14 @@ function App() {
     setScreen('quiz');
   };
 
+  const handleIntroContinue = () => {
+    setScreen('start');
+  };
+
+  const handleIntroOpen = () => {
+    setScreen('intro');
+  };
+
   const handleComplete = (answers) => {
     const scores = calculateScores(answers);
     const typeCode = determineType(scores);
@@ -35,7 +44,13 @@ function App() {
 
   return (
     <div className="app">
-      {screen === 'start' && <StartScreen onStart={handleStart} />}
+      {screen === 'intro' && <IntroScreen onContinue={handleIntroContinue} />}
+      {screen === 'start' && (
+        <StartScreen
+          onStart={handleStart}
+          onIntro={handleIntroOpen}
+        />
+      )}
       {screen === 'quiz' && <QuizScreen onComplete={handleComplete} />}
       {screen === 'result' && (
         <ResultScreen

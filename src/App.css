@@ -45,6 +45,23 @@
   line-height: 1.7;
 }
 
+.intro-link {
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 16px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.intro-link:hover {
+  color: rgba(255, 255, 255, 0.95);
+}
+
 .start-tags {
   display: flex;
   flex-wrap: wrap;
@@ -91,6 +108,102 @@
   color: rgba(255, 255, 255, 0.4);
 }
 
+/* ===== Intro Screen ===== */
+.intro-screen {
+  width: 100%;
+  max-width: 520px;
+}
+
+.intro-hero {
+  text-align: center;
+  margin: 10px 0 28px;
+}
+
+.intro-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.intro-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 107, 157, 0.18);
+  border: 1px solid rgba(255, 107, 157, 0.4);
+}
+
+.intro-back {
+  display: inline-block;
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.intro-back:hover {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.intro-title {
+  font-size: 1.9rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.intro-subtitle {
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+  font-size: 0.98rem;
+}
+
+.intro-grid {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.intro-card {
+  padding: 16px 18px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.intro-card h2 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.intro-card p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.intro-cta {
+  text-align: center;
+}
+
+.intro-note {
+  margin-top: 10px;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
 /* ===== Quiz Screen ===== */
 .quiz-screen {
   width: 100%;
@@ -104,8 +217,39 @@
 
 .progress-info {
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: space-between;
   margin-bottom: 8px;
+}
+
+.back-button {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.85);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.back-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.back-icon {
+  font-size: 0.9rem;
+  line-height: 1;
 }
 
 .progress-text {
